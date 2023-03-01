@@ -9,9 +9,9 @@ jobs:
       - name: Use nodejs
       - uses: actions/setup-node@v3
       - name: install dependencies
-      - uses: npm ci 
+      - run: npm ci 
       - name: Run lint
-      - uses: npm run lint
+      - run: npm run lint
   test:
     runs-on: ubuntu-latest
     steps:
@@ -20,9 +20,9 @@ jobs:
       - name: Use nodejs
       - uses: actions/setup-node@v3
       - name: install dependencies
-      - uses: npm ci 
+      - run: npm ci 
       - name: Run test
-      - uses: npm run test
+      - run: npm run test
   build:
     runs-on: ubuntu-latest
     steps:
@@ -31,6 +31,6 @@ jobs:
       - name: Use nodejs
       - uses: actions/setup-node@v3
       - name: install dependencies
-      - uses: npm ci 
+      - run: npm ci 
       - name: Run build
-      - uses: npm run build
+      - run: npm run build
